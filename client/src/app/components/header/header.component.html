@@ -1,0 +1,51 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()" id="menuIcon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span id="menuTitle"><a routerLink="">مری دکور (Merry Decor) <mat-icon>face_2</mat-icon></a></span>
+    <a mat-button routerLink="/home" class="top-menu-item">خانه</a>
+    <a mat-button routerLink="/work-samples" class="top-menu-item">نمونه کار</a>
+    <a mat-button routerLink="/baby-decor" class="top-menu-item">دکور بچه</a>
+    <a mat-button routerLink="/children-castle" class="top-menu-item">قلعه کودک</a>
+    <a mat-button routerLink="/children-castle" class="top-menu-item">کلبه کودک</a>
+    <a mat-button routerLink="/contact-us" class="top-menu-item">تماس با ما</a>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="60" mode="push">
+        <div class="side-nav-items">
+            <div>
+                <a (click)="sidenav.close()" mat-button routerLink="/home"
+                    class="side-menu-item"><mat-icon>home</mat-icon> خانه</a>
+            </div>
+            <div>
+                <a (click)="sidenav.close()" mat-button routerLink="/work-samples"
+                    class="side-menu-item"><mat-icon>other_houses</mat-icon> نمونه کار</a>
+            </div>
+            <div>
+                <a (click)="sidenav.close()" mat-button routerLink="/baby-decor"
+                    class="side-menu-item"><mat-icon>other_houses</mat-icon> دکور بچه</a>
+            </div>
+            <div>
+                <a (click)="sidenav.close()" mat-button routerLink="/children-castle"
+                    class="side-menu-item"><mat-icon>other_houses</mat-icon> قلعه کودک</a>
+            </div>
+            <div>
+                <a (click)="sidenav.close()" mat-button routerLink="/children-castle"
+                    class="side-menu-item"><mat-icon>other_houses</mat-icon> کلبه کودک</a>
+            </div>
+            <div>
+                <a (click)="sidenav.close()" mat-button routerLink="/contact-us"
+                    class="side-menu-item"><mat-icon>support_agent</mat-icon> تماس با ما</a>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="main-content">
+            <router-outlet></router-outlet>
+            <footer>
+                <app-footer></app-footer>
+            </footer>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
