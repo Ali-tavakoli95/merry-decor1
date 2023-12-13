@@ -24,6 +24,5 @@ export class VideoPlayerComponent {
 
   autoplay() {
     this.api.play();
-
   }
 }

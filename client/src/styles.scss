@@ -4,7 +4,14 @@
 
 @font-face {
     font-family: Yekan;
-    src: url('/assets/fonts/Yekan.ttf');
+    src: url('./assets/fonts/yekan/Yekan.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: vazir;
+    src: url('./assets/fonts/vazir/Vazir.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -26,5 +33,4 @@ body {
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
